@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .splashscreen {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            z-index: 111111;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+    </style>
+
+    <div id="splashscreen" class="splashscreen  align-items-center justify-content-center">
+        <span style="height: 70px;width: 30px;border: 3px solid rgb(0, 0, 0);background-color: aqua;"></span>
+        <span class="ms-1" style="height: 60px;width: 30px;border: 3px solid rgb(0, 0, 0);background-color: aqua;"></span>
+        <span class="ms-1" style="height: 50px;width: 30px;border: 3px solid rgb(0, 0, 0);background-color: aqua;"></span>
+        <span class="ms-1" style="height: 40px;width: 30px;border: 3px solid rgb(0, 0, 0);background-color: aqua;"></span>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded',
+            function () {
+                let splashVar = document.getElementById("splashscreen");
+                if (splashVar) {
+                    setTimeout(function () {
+                        splashVar.style.display = "flex";
+                        setTimeout(function () {
+                            splashVar.style.display = "none";
+                        }, 3000)
+                    },0
+                    )
+                }
+            }
+        )
+    </script>
+
+    <!-- navbar -->
+
+    <div class="container-fluid p-0 " style="background-color: #010101;overflow: hidden;">
+
+
+        <nav id="nav" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <img style="height: 60px;" src="logo.png" alt="">
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span style="color: white;background-color: rgb(255, 255, 255);border: 1px solid white;"
+                        class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-white mx-auto gap-4 mb-2   mb-lg-0">
+                        <li class="nav-item dropdown text-white">
+                            <a style="font-weight: 350;color: rgb(255, 255, 255);font-family: Arial, Helvetica, sans-serif;font-weight: 500;"
+                                class="nav-link  " href="#HOME" role="button" aria-expanded="false">
+                                HOME
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown text-white">
+                            <a style="font-weight: 350;color: rgb(255, 255, 255);font-family: Arial, Helvetica, sans-serif;font-weight: 500;"
+                                class="nav-link  " href="#PAGES" role="button" aria-expanded="false">
+                                PAGES
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown text-white">
+                            <a style="font-weight: 350;color: rgb(255, 255, 255);font-family: Arial, Helvetica, sans-serif;font-weight: 500;"
+                                class="nav-link  " href="#HOME" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                SERVICES
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown text-white">
+                            <a style="font-weight: 350;color: rgb(255, 255, 255);font-family: Arial, Helvetica, sans-serif;font-weight: 500;"
+                                class="nav-link  " href="#PORTFOLIO" role="button" aria-expanded="false">
+                                PORTFOLIO
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown text-white">
+                            <a style="font-weight: 350;color: rgb(255, 255, 255);font-family: Arial, Helvetica, sans-serif;font-weight: 500;"
+                                class="nav-link  " href="#BLOG" role="button" aria-expanded="false">
+                                BLOG
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown text-white">
+                            <a style="font-weight: 350;color: rgb(255, 255, 255);font-family: Arial, Helvetica, sans-serif;font-weight: 500;"
+                                class="nav-link  " href="#CONTACT" role="button" aria-expanded="false">
+                                CONTACT
+                            </a>
+                        </li>
+
+                    </ul>
+                    <i class="bi bi-cart text-white fs-4 me-3 "></i>
+                    <img class="me-4" src="toggler.svg" alt="">
+                    <button class="btn-button-1">LET'S TALK</button>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="container ">
+            <div class="row py-5">
+                <div class="col-lg-6 d-flex align-items-center justify-content-center" style="position: relative;">
+                    <img src="hero-main.jpg" style="height: 100%;width: 97%;object-fit: cover;" alt="">
+                    <img src="play-text.svg" style="position: absolute;" alt="">
+                    <img class="d-md-flex d-none" src="hero-small.jpg"
+                        style="position: absolute;top: 305px;left: 320px;object-fit: cover;" alt="">
+                </div>
+                <div class="col-lg-6 d-flex align-items-center justify-content-center flex-column"
+                    style="color: white;">
+
+                    <div class="justify-content-evenly align-items-end d-flex flex-column">
+                        <h1 class="display-1 fw-bold">DIGITAL <i class="bi bi-asterisk" style="color: #c4ef17;"></i>
+                        </h1>
+                        <h2 class="display-3  ms-5 mt-3">Agency</h2>
+                        <p style="font-size: 15px;" class="mt-5">Welcome to our Print 128 website! We are a professional
+                            and
+                            <br> reliable printing company that offers a wide range of printing <br> services to meet
+                            your
+                            needs.
+                        </p>
+                        <img src="hero-shape.png" class="mt-5" alt="">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- second section  -->
+
+    <div class="container-fluid py-5" style="background-color: #010101;">
+        <div class="row" style="overflow: hidden;flex-wrap: nowrap;">
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;">Get In Touch — phone: +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;">Get In Touch — phone: +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;">Get In Touch — phone: +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;">Get In Touch — phone: +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;">Get In Touch — phone: +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;">Get In Touch — phone: +1(800)123-4566</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- third section  -->
+
+    <div class="container-fluid py-5" style="background-color: #010101;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-start justify-content-center flex-column">
+                    <h1 style="color: #c4ef17;font-size: 20px;">| Trusted web design agency</h1>
+                    <h5 class="text-white display-5 fw-bold">We’re a digital design studio connecting brands to people
+                        through craft and culture. <i class="bi bi-asterisk" style="color: #c4ef17;"></i></h5>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center justify-content-center py-5 flex-wrap"
+                    style="background-color:#262626;">
+                    <div class="col-6 d-flex align-items-center justify-content-center ">
+                        <img src="a1.png" alt="">
+                    </div>
+                    <div class="col-6 d-flex align-items-center justify-content-center ">
+                        <img src="a2.png" alt="">
+                    </div>
+                    <div class="col-6 d-flex align-items-center justify-content-center mt-5">
+                        <img src="a3.png" class="me-5" alt="">
+                    </div>
+                    <div class="col-6 d-flex align-items-center justify-content-center mt-5">
+                        <img src="a4.png" alt="">
+                    </div>
+                    <div class="col-6 d-flex align-items-center justify-content-center mt-5">
+                        <img src="a5.png" alt="">
+                    </div>
+                    <div class="col-6 d-flex align-items-center justify-content-center mt-5">
+                        <img src="a6.png" alt="">
+                    </div>
+
+                </div>
+                <h1 style="color: white;text-align: center;font-size: 25px;margin-top: 50px;">Contact us or send an
+                    <span style="color: #c4ef17;">email to</span> info@Mehedii.com
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- forth section  -->
+
+
+    <div
+        class="container-fluid d-flex align-items-center justify-content-center flex-column  forth-section py-5 position-relative">
+        <h2 class="text-white h1" style="font-size: 9vw;"><span style="border-bottom: 5px solid white;">Play</span>
+            intro</h2>
+        <div class="">
+            ><img src="play-text.svg" style="margin-left:100px;" alt="">
+        </div>
+        <span style="color: #c4ef17;font-size: 90px;margin-left:180px;font-weight: bold;">Video</span>
+
+        <img style="width: 100%;position: absolute;bottom: 0;" src="wave-shape.png" alt="">
+    </div>
+
+    <!-- five-section  -->
+
+    <div class="container-fluid py-5" style="background-color:#010101;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 style="color: #c4ef17;font-size: 20px;">| Trusted web design Service</h1>
+                    <h1 class="text-white display-4 fw-bold">modern & intuitive web solutions</h1>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center justify-content-end">
+                    <button class="btn-button">VIEW ALL SERVICES</button>
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-center py-5">
+                <div class="col-lg-4 d-flex align-items-center justify-content-center py-5"
+                    style="border-bottom: 1px solid grey;">
+                    <div class="col-8 d-flex align-items-start justify-content-center flex-column">
+                        <h1 style="color: white;font-size: 20px;" class="hover">WEBSITE DESIGN</h1>
+                        <p style="color: gray;">Be advised that image .</p>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span style="color: gray;"><i class="bi bi-arrow-up-right display-5"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center justify-content-center py-5"
+                    style="border-bottom: 1px solid grey;">
+                    <div class="col-8 d-flex align-items-start justify-content-center flex-column">
+                        <h1 style="color: white;font-size: 20px;" class="hover">WEBSITE DESIGN</h1>
+                        <p style="color: gray;">Be advised that image .</p>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span style="color: gray;"><i class="bi bi-arrow-up-right display-5"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center justify-content-center py-5"
+                    style="border-bottom: 1px solid grey;">
+                    <div class="col-8 d-flex align-items-start justify-content-center flex-column">
+                        <h1 style="color: white;font-size: 20px;" class="hover">WEBSITE DESIGN</h1>
+                        <p style="color: gray;">Be advised that image .</p>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span style="color: gray;"><i class="bi bi-arrow-up-right display-5"></i></span>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex align-items-center justify-content-center py-5"
+                    style="border-bottom: 1px solid grey;">
+                    <div class="col-8 d-flex align-items-start justify-content-center flex-column">
+                        <h1 style="color: white;font-size: 20px;" class="hover">WEBSITE DESIGN</h1>
+                        <p style="color: gray;">Be advised that image .</p>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span style="color: gray;"><i class="bi bi-arrow-up-right display-5"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center justify-content-center py-5"
+                    style="border-bottom: 1px solid grey;">
+                    <div class="col-8 d-flex align-items-start justify-content-center flex-column">
+                        <h1 style="color: white;font-size: 20px;" class="hover">WEBSITE DESIGN</h1>
+                        <p style="color: gray;">Be advised that image .</p>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span style="color: gray;"><i class="bi bi-arrow-up-right display-5"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center justify-content-center py-5"
+                    style="border-bottom: 1px solid grey;">
+                    <div class="col-8 d-flex align-items-start justify-content-center flex-column">
+                        <h1 style="color: white;font-size: 20px;" class="hover">WEBSITE DESIGN</h1>
+                        <p style="color: gray;">Be advised that image .</p>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <span style="color: gray;"><i class="bi bi-arrow-up-right display-5"></i></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- six section  -->
+
+    <div class="container-fluid py-5" style="background-color:#010101;">
+        <div class="row" style="overflow: hidden;flex-wrap: nowrap;">
+            <div class="col-lg-4 slider-1 py-4" style="color: white;">
+                <h1 style="font-size: 50px;">/ MARKETING</h1>
+            </div>
+            <div class="col-lg-4 slider-1 py-4" style="color: white;">
+                <h1 style="font-size: 50px;">/ DISIGN</h1>
+            </div>
+            <div class="col-lg-4 slider-1 py-4" style="color: white;">
+                <h1 style="font-size: 50px;">/ DEVELOPMENT</h1>
+            </div>
+            <div class="col-lg-4 slider-1 py-4" style="color: white;">
+                <h1 style="font-size: 50px;">/ MARKETING</h1>
+            </div>
+            <div class="col-lg-4 slider-1 py-4" style="color: white;">
+                <h1 style="font-size: 50px;">/ DISIGN</h1>
+            </div>
+            <div class="col-lg-4 slider-1 py-4" style="color: white;">
+                <h1 style="font-size: 50px;">/ DEVELOPMENT</h1>
+            </div>
+            <div class="col-lg-4 slider-1 py-4" style="color: white;">
+                <h1 style="font-size: 50px;">/ MARKETING</h1>
+            </div>
+            <div class="col-lg-4 slider-1 py-4" style="color: white;">
+                <h1 style="font-size: 50px;">/ DISIGN</h1>
+            </div>
+            <div class="col-lg-4 slider-1 py-4" style="color: white;">
+                <h1 style="font-size: 50px;">/ DEVELOPMENT</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- saven section -->
+
+    <div class="container-fluid py-5 " style="background-color: #010101;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center justify-content-center justify-content-center">
+                    <img src="about-left.png" style="height: 100%;width: 100%;" alt="">
+                </div>
+                <div
+                    class="col-lg-6 d-flex align-items-start justify-content-center justify-content-center flex-column">
+                    <p style="color: #c4ef17;">| Trusted web design agency</p>
+                    <h1 style="color: white;font-weight: bold;" class="display-4">Why should choose our design <span
+                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">agency</span>
+                    </h1>
+                    <p style="color: gray;">There are many variations of simply free text passages of available but the
+                        majority have suffered alteration in some form, by injected hum randomis words which don't
+                        slightly.</p>
+                    <h1 style="color: #c4ef17;font-size: 20px;">Proin est lacus, sagittislobortis iaculise get
+                        sagittislo</h1>
+                    <div class="col-12 d-flex align-items-center justify-content-evenly">
+                        <div class="col-6 d-flex align-items-center justify-content-evenly">
+                            <img src="light.png" alt="">
+                            <h1 style="color: white;font-size: 20px;" class="ms-3">Leader of creative agency</h1>
+                        </div>
+                        <div class="col-6 d-flex align-items-center justify-content-evenly">
+                            <img src="development.png" alt="">
+                            <h1 style="color: white;font-size: 20px;" class="ms-4">Highest quality development</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- eight section  -->
+
+
+    <div class="container-fluid py-5" style="background-color:#010101;">
+        <div class="row" style="overflow: hidden;flex-wrap: nowrap;">
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;"><i class="fas fa-bahai" style="color: #c4ef17;"></i> Get In Touch — phone:
+                    +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;"><i class="fas fa-bahai" style="color: #c4ef17;"></i> Get In Touch — phone:
+                    +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;"><i class="fas fa-bahai" style="color: #c4ef17;"></i> Get In Touch — phone:
+                    +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;"><i class="fas fa-bahai" style="color: #c4ef17;"></i> Get In Touch — phone:
+                    +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;"><i class="fas fa-bahai" style="color: #c4ef17;"></i> Get In Touch — phone:
+                    +1(800)123-4566</h1>
+            </div>
+            <div class="col-lg-4 slider py-4" style="color: white;">
+                <h1 style="font-size: 20px;"><i class="fas fa-bahai" style="color: #c4ef17;"></i> Get In Touch — phone:
+                    +1(800)123-4566</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- nine section  -->
+
+    <div class="container-fluid py-5" style="background-color: #010101;" id="PORTFOLIO">
+        <div class="row">
+            <h1 style="font-size: 20px ;color: #c4ef17;text-align: center;">| Work portfolio for company</h1>
+            <h1 style="font-size: 60px;color: #ffffff;text-align: center;">Recent Work Portfolio</h1>
+        </div>
+        <div class="row py-3">
+            <div class="col-lg-3" style="height: 650px;">
+                <div class="col-12 img-1 d-flex align-items-start justify-content-end flex-column py-3">
+                    <button
+                        style="padding: 12px 24px;background-color: #c4ef17;border: none;font-size: 20px;color: 000000;font-family: sans-serif;"
+                        class="ms-3">Digital Marketing</button>
+                    <button
+                        style="padding: 12px 24px;background-color: #262626;border: none;color: #ffffff99;font-family:sans regular;"
+                        class="ms-3">Art , Direction</button>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-evenly flex-column"
+                style="height: 650px;gap: 10px;">
+                <div class="col-12 img-2 d-flex align-items-start justify-content-end flex-column py-3">
+                    <button
+                        style="padding: 12px 24px;background-color: #c4ef17;border: none;font-size: 20px;color: 000000;font-family: sans-serif;"
+                        class="ms-3">Digital Marketing</button>
+                    <button
+                        style="padding: 12px 24px;background-color: #262626;border: none;color: #ffffff99;font-family:sans regular;"
+                        class="ms-3">Art , Direction</button>
+                </div>
+                <div class="col-12 img-3 d-flex align-items-start justify-content-end flex-column py-3">
+                    <button
+                        style="padding: 12px 24px;background-color: #c4ef17;border: none;font-size: 20px;color: 000000;font-family: sans-serif;"
+                        class="ms-3">Digital Marketing</button>
+                    <button
+                        style="padding: 12px 24px;background-color: #262626;border: none;color: #ffffff99;font-family:sans regular;"
+                        class="ms-3">Art , Direction</button>
+                </div>
+            </div>
+            <div class="col-lg-3" style="height: 650px;">
+                <div class="col-12 img-4 d-flex align-items-start justify-content-end flex-column py-3">
+                    <button
+                        style="padding: 12px 24px;background-color: #c4ef17;border: none;font-size: 20px;color: 000000;font-family: sans-serif;"
+                        class="ms-3">Digital Marketing</button>
+                    <button
+                        style="padding: 12px 24px;background-color: #262626;border: none;color: #ffffff99;font-family:sans regular;"
+                        class="ms-3">Art , Direction</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ten section  -->
+
+    <div class="container-fluid py-5" style="background-color: #010101;overflow: hidden;">
+        <div class="row">
+            <p style="color: #c4ef17;font-size: 20px;">| our honurable awwards</p>
+            <h1 style="color: #ffffff;font-size: 60px;font-family: sans-serif;font-weight: bold;">Checkout our <span
+                    style="font-family: semlexpand light;">awards</span> & achievements</h1>
+        </div>
+
+        <!-- 1 -->
+
+        <div class="row eat-sec ">
+            <div class="col-lg-12  d-flex" style="border-top: 1px solid rgba(255, 255, 255, 0.073);">
+                <div class="col-md-3 py-4 d-flex justify-content-center align-items-center" style="position: relative;">
+                    <span
+                        style="padding: 14px 32px;color: white;border: 1px solid white;border-radius: 30px;">2012</span>
+                    <div style="overflow: hidden;position: absolute;width: 100%;height: 100%;top: 0;opacity: 0;"
+                        class="hover-2 d-flex justify-content-center align-items-center ">
+                        <h1 class="text-white  fs-5">This Award Provide <br> From Gvt.BD</h1>
+                    </div>
+                </div>
+
+                <div class="col-md-2 py-4 d-md-flex d-none justify-content-center align-items-center"
+                    style="border-right: 1px solid rgba(255, 255, 255, 0.073);border-left: 1px solid rgba(255, 255, 255, 0.073);">
+                    <img src="awward1.svg" alt="">
+                </div>
+
+                <div class="col-md-5 col-2 py-4 d-flex justify-content-evenly align-items-center"
+                    style="border-right: 1px solid rgba(255, 255, 255, 0.073);">
+                    <h1 style="color: #ffffff;font-size: 22px;font-family: sans-serif;" class="ms-5 eat-mini">
+                        Awwwards
+                        animation quality
+                    </h1>
+                    `<div class="eat-big d-md-flex d-none justify-content-center align-items-center me-5"
+                        style="border: 1px solid white;border-radius: 100%;height: 50px;width: 50px;">
+                        <span class="text-white">20</span>
+                    </div>
+                </div>
+
+                <div class="col-md-2 hg d-flex justify-content-end align-items-center col-6">
+                    <i style="color: white;background-color: rgba(128, 128, 128, 0.243);padding: 18px 28px;border-radius: 100%;"
+                        class="bi bi-arrow-up-right hj fs-4"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+
+
+        <div class="row eat-sec">
+            <div class="col-lg-12  d-flex" style="border-top: 1px solid rgba(255, 255, 255, 0.073);">
+                <div class="col-md-3 py-4 d-flex justify-content-center align-items-center" style="position: relative;">
+                    <span
+                        style="padding: 14px 32px;color: white;border: 1px solid white;border-radius: 30px;">2012</span>
+                    <div style="overflow: hidden;position: absolute;width: 100%;height: 100%;top: 0;opacity: 0;"
+                        class="hover-2 d-flex justify-content-center align-items-center ">
+                        <h1 class="text-white  fs-5">This Award Provide <br> From Gvt.BD</h1>
+                    </div>
+                </div>
+
+                <div class="col-md-2 py-4 d-md-flex d-none justify-content-center align-items-center"
+                    style="border-right: 1px solid rgba(255, 255, 255, 0.073);border-left: 1px solid rgba(255, 255, 255, 0.073);">
+                    <img src="awward1.svg" alt="">
+                </div>
+
+                <div class="col-md-5 col-2 py-4 d-flex justify-content-evenly align-items-center"
+                    style="border-right: 1px solid rgba(255, 255, 255, 0.073);">
+                    <h1 style="color: #ffffff;font-size: 22px;font-family: sans-serif;" class=" eat-mini">
+                        Site of the day
+                    </h1>
+                    `<div class="eat-big d-md-flex d-none justify-content-center align-items-center ms-5"
+                        style="border: 1px solid white;border-radius: 100%;height: 50px;width: 50px;">
+                        <span class="text-white">20</span>
+                    </div>
+                </div>
+
+                <div class="col-md-2 hg d-flex justify-content-end align-items-center col-6">
+                    <i style="color: white;background-color: rgba(128, 128, 128, 0.243);padding: 18px 28px;border-radius: 100%;"
+                        class="bi bi-arrow-up-right hj fs-4"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+
+        <div class="row eat-sec">
+            <div class="col-lg-12  d-flex" style="border-top: 1px solid rgba(255, 255, 255, 0.073);">
+                <div class="col-md-3 py-4 d-flex justify-content-center align-items-center" style="position: relative;">
+                    <span
+                        style="padding: 14px 32px;color: white;border: 1px solid white;border-radius: 30px;">2012</span>
+                    <div style="overflow: hidden;position: absolute;width: 100%;height: 100%;top: 0;opacity: 0;"
+                        class="hover-2 d-flex justify-content-center align-items-center ">
+                        <h1 class="text-white  fs-5">This Award Provide <br> From Gvt.BD</h1>
+                    </div>
+                </div>
+
+                <div class="col-md-2 py-4 d-md-flex d-none justify-content-center align-items-center"
+                    style="border-right: 1px solid rgba(255, 255, 255, 0.073);border-left: 1px solid rgba(255, 255, 255, 0.073);">
+                    <img src="awward1.svg" alt="">
+                </div>
+
+                <div class="col-md-5 col-2 py-4 d-flex justify-content-evenly align-items-center"
+                    style="border-right: 1px solid rgba(255, 255, 255, 0.073);">
+                    <h1 style="color: #ffffff;font-size: 22px;font-family: sans-serif;" class="ms-4 eat-mini">
+                        Creative product design
+                    </h1>
+                    `<div class="eat-big d-md-flex d-none justify-content-center align-items-center me-4"
+                        style="border: 1px solid white;border-radius: 100%;height: 50px;width: 50px;">
+                        <span class="text-white">20</span>
+                    </div>
+                </div>
+
+                <div class="col-md-2 hg d-flex justify-content-end align-items-center col-6">
+                    <i style="color: white;background-color: rgba(128, 128, 128, 0.243);padding: 18px 28px;border-radius: 100%;"
+                        class="bi bi-arrow-up-right hj fs-4"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+
+
+        <div class="row eat-sec">
+            <div class="col-lg-12  d-flex" style="border-top: 1px solid rgba(255, 255, 255, 0.073);">
+                <div class="col-md-3 py-4 d-flex justify-content-center align-items-center" style="position: relative;">
+                    <span
+                        style="padding: 14px 32px;color: white;border: 1px solid white;border-radius: 30px;">2012</span>
+                    <div style="overflow: hidden;position: absolute;width: 100%;height: 100%;top: 0;opacity: 0;"
+                        class="hover-2 d-flex justify-content-center align-items-center ">
+                        <h1 class="text-white  fs-5">This Award Provide <br> From Gvt.BD</h1>
+                    </div>
+                </div>
+
+                <div class="col-md-2 py-4 d-md-flex d-none justify-content-center align-items-center"
+                    style="border-right: 1px solid rgba(255, 255, 255, 0.073);border-left: 1px solid rgba(255, 255, 255, 0.073);">
+                    <img src="awward1.svg" alt="">
+                </div>
+
+                <div class="col-md-5 col-2 py-4 d-flex justify-content-evenly align-items-center"
+                    style="border-right: 1px solid rgba(255, 255, 255, 0.073);">
+                    <h1 style="color: #ffffff;font-size: 22px;font-family: sans-serif;" class="ms-5 eat-mini">
+                        Awwwards
+                        animation quality
+                    </h1>
+                    `<div class="eat-big d-md-flex d-none justify-content-center align-items-center me-5"
+                        style="border: 1px solid white;border-radius: 100%;height: 50px;width: 50px;">
+                        <span class="text-white">20</span>
+                    </div>
+                </div>
+
+                <div class="col-md-2 hg d-flex justify-content-end align-items-center col-6">
+                    <i style="color: white;background-color: rgba(128, 128, 128, 0.243);padding: 18px 28px;border-radius: 100%;"
+                        class="bi bi-arrow-up-right hj fs-4"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- end -->
+
+    </div>
+
+    <!-- elevan SECTION -->
+    <div class="container-fluid bg-black py-5"
+        style="background-image: url(circle\ \(1\).png);background-size: contain;background-repeat: no-repeat;">
+
+
+        <div class="row">
+            <span style="color: #c4ef17;font-size: 20px;font-weight: 450px;text-align: center;">| TEAM MEMBER OF
+                COMPANY</span>
+            <h1 class="fw-bold text-white display-2 text-center">Extra ordinary creation <br> Team behind</h1>
+
+        </div>
+
+        <div class="row py-5" id="PAGES">
+
+
+
+            <div class="col-lg-3 ">
+
+                <div class="col-12 hover-parent d-flex justify-content-end align-items-center flex-column"
+                    style="background-image: url(team1.jpg);background-size: cover;height: 450px;">
+
+                    <h1 class="hover-1 fs-3" style="position: absolute;color: white;">Ronald Richards</h1>
+
+                    <div class="hover-div d-flex align-items-center justify-content-center flex-column"
+                        style="height: 230px;width: 230px;border-radius: 100%;background: rgb(184,183,178);background: linear-gradient(27deg, rgba(184,183,178,1) 13%, rgba(162,162,162,1) 39%, rgba(158,158,158,1) 61%, rgba(125,126,126,0.3535539215686274) 98%);">
+
+                        <h6 class="text-center">creative director</h6>
+
+                        <h2 class="text-center" style="font-size: 30px;">Ronald Richards</h2>
+
+                        <div class="icon-div-3 d-flex align-items-center justify-content-around" style="width: 80%;">
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-twitter icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-facebook icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-instagram icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-pinterest icons"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 mt-5">
+                <div class="col-12 hover-parent d-flex justify-content-end align-items-center flex-column"
+                    style="background-image: url(team2.jpg);background-size: cover;height: 450px;">
+
+                    <h1 class="hover-1 fs-3" style="position: absolute;color: white;">ESTHER HOWAR
+                    </h1>
+                    <div class="hover-div d-flex align-items-center justify-content-center flex-column"
+                        style="height: 230px;width: 230px;border-radius: 100%;background: rgb(184,183,178);background: linear-gradient(27deg, rgba(184,183,178,1) 13%, rgba(162,162,162,1) 39%, rgba(158,158,158,1) 61%, rgba(125,126,126,0.3535539215686274) 98%);">
+
+                        <h6 class="text-center">creative director</h6>
+
+                        <h2 class="text-center" style="font-size: 30px;">ESTHER HOWAR</h2>
+
+                        <div class="icon-div-3 d-flex align-items-center justify-content-around" style="width: 80%;">
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-twitter icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-facebook icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-instagram icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-pinterest icons"></i>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 ">
+
+                <div class="col-12 hover-parent d-flex justify-content-end align-items-center flex-column"
+                    style="background-image: url(team3.jpg);background-size: cover;height: 450px;">
+
+                    <h1 class="hover-1 fs-3" style="position: absolute;color: white;">Jenny Wilson</h1>
+
+                    <div class="hover-div d-flex align-items-center justify-content-center flex-column"
+                        style="height: 230px;width: 230px;border-radius: 100%;background: rgb(184,183,178);background: linear-gradient(27deg, rgba(184,183,178,1) 13%, rgba(162,162,162,1) 39%, rgba(158,158,158,1) 61%, rgba(125,126,126,0.3535539215686274) 98%);">
+
+                        <h6 class="text-center">creative director</h6>
+
+                        <h2 class="text-center" style="font-size: 30px;">Jenny Wilson</h2>
+
+                        <div class="icon-div-3 d-flex align-items-center justify-content-around" style="width: 80%;">
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-twitter icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-facebook icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-instagram icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-pinterest icons"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-3  mt-5">
+                <div class="col-12 hover-parent d-flex justify-content-end align-items-center flex-column"
+                    style="background-image: url(team4.jpg);background-size: cover;height: 450px;position: relative;">
+
+                    <h1 class="hover-1 fs-3" style="position: absolute;color: white;">Bessie Cooper</h1>
+
+                    <div class="hover-div d-flex align-items-center justify-content-center flex-column"
+                        style="height: 230px;width: 230px;border-radius: 100%;background: rgb(184,183,178);background: linear-gradient(27deg, rgba(184,183,178,1) 13%, rgba(162,162,162,1) 39%, rgba(158,158,158,1) 61%, rgba(125,126,126,0.3535539215686274) 98%);">
+
+                        <h6 class="text-center">creative director</h6>
+
+                        <h2 class="text-center" style="font-size: 30px;">Bessie Cooper</h2>
+
+                        <div class="icon-div-3 d-flex align-items-center justify-content-around" style="width: 80%;">
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-twitter icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-facebook icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-instagram icons"></i>
+
+                            <i style="color: gray;font-size: 25px;" class="bi bi-pinterest icons"></i>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- twel  SECTION -->
+        <div class="container-fluid " style="background-color: #010101;">
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <img style="width: 90%;height: 100%;object-fit: cover;" src="testimonials-left.png" alt="">
+                </div>
+
+
+
+
+                <div class="col-lg-6  position-relative  pt-5">
+
+                    <span style="color: #c4ef17;font-weight: 500;font-size: 22px;">| check our news & Blogs</span>
+                    <h2 class="fw-bold text-white display-4">Checkout our awards <br> & achievements</h2>
+                    <div class="row flex-nowrap  ms-3 overflow-hidden ">
+
+
+
+                        <div style="width: 100%;" class="feed-card mt-5">
+
+                            <p style="color: rgb(131, 127, 127);font-size: 22px;">There aredolor sit, amet
+                                consectetur adipisicing elit. Architecto quaerat placeat maiores, voluptate enim
+                                voluptatum perferendis, provident laudantium corrupti labore beatae accusamus
+                                obcaecati unde natus expedita consectetur officiis eius asperiores?</p>
+                            <div class="row">
+                                <div class="col-md-2 col-4 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <img src="author1.png" alt="">
+                                </div>
+                                <div class="col-md-5 col-5 d-flex justify-content-center align-items-md-center flex-column"
+                                    style="height: 100px;">
+                                    <span style="color: white;font-weight: 560;font-size: 22px;">Camaron
+                                        Williomson</span>
+                                    <p style="color: #c4ef17;">Graphic Design</p>
+                                </div>
+                                <div class="col-md-2 col-2 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div style="width: 100%;" class="feed-card mt-5">
+
+                            <p style="color: rgb(131, 127, 127);font-size: 22px;">There aredolor sit, amet
+                                consectetur adipisicing elit. Architecto quaerat placeat maiores, voluptate enim
+                                voluptatum perferendis, provident laudantium corrupti labore beatae accusamus
+                                obcaecati unde natus expedita consectetur officiis eius asperiores?</p>
+                            <div class="row">
+                                <div class="col-md-2 col-4 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <img src="author1.png" alt="">
+                                </div>
+                                <div class="col-md-5 col-5 d-flex justify-content-center align-items-md-center flex-column"
+                                    style="height: 100px;">
+                                    <span style="color: white;font-weight: 560;font-size: 22px;">Camaron
+                                        Williomson</span>
+                                    <p style="color: #c4ef17;">Graphic Design</p>
+                                </div>
+                                <div class="col-md-2 col-2 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div style="width: 100%;" class="feed-card mt-5">
+
+                            <p style="color: rgb(131, 127, 127);font-size: 22px;">There aredolor sit, amet
+                                consectetur adipisicing elit. Architecto quaerat placeat maiores, voluptate enim
+                                voluptatum perferendis, provident laudantium corrupti labore beatae accusamus
+                                obcaecati unde natus expedita consectetur officiis eius asperiores?</p>
+                            <div class="row">
+                                <div class="col-md-2 col-4 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <img src="author1.png" alt="">
+                                </div>
+                                <div class="col-md-5 col-5 d-flex justify-content-center align-items-md-center flex-column"
+                                    style="height: 100px;">
+                                    <span style="color: white;font-weight: 560;font-size: 22px;">Camaron
+                                        Williomson</span>
+                                    <p style="color: #c4ef17;">Graphic Design</p>
+                                </div>
+                                <div class="col-md-2 col-2 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div style="width: 100%;" class="feed-card mt-5">
+
+                            <p style="color: rgb(131, 127, 127);font-size: 22px;">There aredolor sit, amet
+                                consectetur adipisicing elit. Architecto quaerat placeat maiores, voluptate enim
+                                voluptatum perferendis, provident laudantium corrupti labore beatae accusamus
+                                obcaecati unde natus expedita consectetur officiis eius asperiores?</p>
+                            <div class="row">
+                                <div class="col-md-2 col-4 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <img src="author1.png" alt="">
+                                </div>
+                                <div class="col-md-5 col-5 d-flex justify-content-center align-items-md-center flex-column"
+                                    style="height: 100px;">
+                                    <span style="color: white;font-weight: 560;font-size: 22px;">Camaron
+                                        Williomson</span>
+                                    <p style="color: #c4ef17;">Graphic Design</p>
+                                </div>
+                                <div class="col-md-2 col-2 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div style="width: 100%;" class="feed-card mt-5">
+
+                            <p style="color: rgb(131, 127, 127);font-size: 22px;">There aredolor sit, amet
+                                consectetur adipisicing elit. Architecto quaerat placeat maiores, voluptate enim
+                                voluptatum perferendis, provident laudantium corrupti labore beatae accusamus
+                                obcaecati unde natus expedita consectetur officiis eius asperiores?</p>
+                            <div class="row">
+                                <div class="col-md-2 col-4 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <img src="author1.png" alt="">
+                                </div>
+                                <div class="col-md-5 col-5 d-flex justify-content-center align-items-md-center flex-column"
+                                    style="height: 100px;">
+                                    <span style="color: white;font-weight: 560;font-size: 22px;">Camaron
+                                        Williomson</span>
+                                    <p style="color: #c4ef17;">Graphic Design</p>
+                                </div>
+                                <div class="col-md-2 col-2 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div style="width: 100%;" class="feed-card mt-5">
+
+                            <p style="color: rgb(131, 127, 127);font-size: 22px;">There aredolor sit, amet
+                                consectetur adipisicing elit. Architecto quaerat placeat maiores, voluptate enim
+                                voluptatum perferendis, provident laudantium corrupti labore beatae accusamus
+                                obcaecati unde natus expedita consectetur officiis eius asperiores?</p>
+                            <div class="row">
+                                <div class="col-md-2 col-4 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <img src="author1.png" alt="">
+                                </div>
+                                <div class="col-md-5 col-5 d-flex justify-content-center align-items-md-center flex-column"
+                                    style="height: 100px;">
+                                    <span style="color: white;font-weight: 560;font-size: 22px;">Camaron
+                                        Williomson</span>
+                                    <p style="color: #c4ef17;">Graphic Design</p>
+                                </div>
+                                <div class="col-md-2 col-2 d-flex justify-content-center align-items-center"
+                                    style="height: 100px;">
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                    <i style="color: gold;" class="bi bi-star-fill fs-5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="width: 100%;" class="d-flex gap-4 mt-5 ms-3">
+                        <span class="lines-f1 lines-f"></span>
+                        <span class="lines-f2 lines-f"></span>
+                        <span class="lines-f3 lines-f"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- RELGADI -->
+
+        <div class="container-fluid py-5" style="background-color: #010101;color: white;">
+
+            <div class="row" style="overflow: hidden;flex-wrap: nowrap;">
+
+                <div class="col-lg-4 slider py-4">
+
+                    <h6 style="font-size: 20px;"> <span style="color: #c4EF17;">* </span> MARKETING BASED DEVELOPMENT
+                    </h6>
+
+                </div>
+
+                <div class="col-lg-4 slider py-4">
+
+                    <h6 style="font-size: 20px;"> <span style="color: #c4EF17;">* </span> CUSTOMER BUSINESS SOLUTION
+                    </h6>
+
+                </div>
+
+                <div class="col-lg-4 slider py-4">
+
+                    <h6 style="font-size: 20px;"><span style="color: #c4EF17;">* DESIGN </span>- CUSTOMER CENTRIC
+                        SOLUTION
+                    </h6>
+
+                </div>
+
+                <div class="col-lg-4 slider py-4">
+
+                    <h6 style="font-size: 20px;"><span style="color: #c4EF17;">* </span> WEB DEVELOPMENT BASED COMPANY
+                    </h6>
+
+                </div>
+
+
+                <div class="col-lg-4 slider py-4">
+
+                    <h6 style="font-size: 20px;"> <span style="color: #c4EF17;">* </span> MARKETING BASED DEVELOPMENT
+                    </h6>
+
+                </div>
+
+                <div class="col-lg-4 slider py-4">
+
+                    <h6 style="font-size: 20px;"> <span style="color: #c4EF17;">* </span> CUSTOMER BUSINESS SOLUTION
+                    </h6>
+
+                </div>
+
+                <div class="col-lg-4 slider py-4">
+
+                    <h6 style="font-size: 20px;"><span style="color: #c4EF17;">* DESIGN </span>- CUSTOMER CENTRIC
+                        SOLUTION
+                    </h6>
+
+                </div>
+
+                <div class="col-lg-4 slider py-4">
+
+                    <h6 style="font-size: 20px;"><span style="color: #c4EF17;">* </span> WEB DEVELOPMENT BASED COMPANY
+                    </h6>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--  -->
+
+
+        <!-- thirdtin SECTION -->
+
+
+        <div class="container-fluid bg-black" id="BLOG">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-8">
+                        <span style="color: #c4ef17;font-weight: 500;font-size: 22px;">| check our news & Blogs</span>
+                        <h2 class="fw-bold text-white display-4">Checkout our awards <br> & achievements</h2>
+                    </div>
+
+                    <div class="col-lg-4 py-3 d-flex justify-content-end align-items-center">
+                        <button class="buton-hov">VIEW ALL SERVICE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- fotyin SECTION -->
+
+
+        <div class="container-fluid bg-black">
+            <div class="row">
+                <div class=" text d-flex justify-content-center align-items-center flex-column py-5"
+                    style="background-color: #000000;">
+                    <div class="col-lg-12 d-flex mt-1 py-4 textt position-relative"
+                        style="border-top: 1px solid #ffffff24;background-color: #000000; border-bottom: 1px solid #ffffff1f;">
+                        <div class="col-md-8">
+                            <span style="color: grey;font-weight: bold;font-size: 20px;">02 Apr 2023 Comments (03)
+                            </span>
+                            <h3 class="twel-text">Trending Code Setting For A Nice Portfolio</h3>
+                        </div>
+
+                        <div class="col-md-4 d-flex  justify-md-content-end align-items-center">
+                            <span class="twel "><i class="bi bi-arrow-up-short"></i> VIEW BLOG DETAILS</span>
+                        </div>
+
+                        <img class="img2 right position-absolute " src="blog1.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class=" text d-flex justify-content-center align-items-center flex-column"
+                    style="background-color: #000000;">
+                    <div class="col-lg-12 d-flex  py-4 textt position-relative"
+                        style="background-color: #000000; border-bottom: 1px solid #ffffff1f;">
+                        <div class="col-md-8">
+                            <span style="color: grey;font-weight: bold;font-size: 20px;">02 Apr 2023 Comments (03)
+                            </span>
+                            <h3 class="twel-text">Trending Code Setting For A Nice Portfolio</h3>
+                        </div>
+
+                        <div class="col-md-4 d-flex  justify-md-content-end align-items-center">
+                            <span class="twel "><i class="bi bi-arrow-up-short"></i> VIEW BLOG DETAILS</span>
+                        </div>
+
+                        <img class="img2 right position-absolute " src="blog1.jpg" alt="">
+                    </div>
+
+                </div>
+
+                <div class=" text d-flex justify-content-center align-items-center flex-column"
+                    style="background-color: #000000;">
+                    <div class="col-lg-12 d-flex  py-4 textt position-relative"
+                        style="background-color: #000000; border-bottom: 1px solid #ffffff1f;">
+                        <div class="col-md-8">
+                            <span style="color: grey;font-weight: bold;font-size: 20px;">02 Apr 2023 Comments (03)
+                            </span>
+                            <h3 class="twel-text">Trending Code Setting For A Nice Portfolio</h3>
+                        </div>
+
+                        <div class="col-md-4 d-flex  justify-md-content-end align-items-center">
+                            <span class="twel "><i class="bi bi-arrow-up-short"></i> VIEW BLOG DETAILS</span>
+                        </div>
+
+                        <img class="img2 right position-absolute " src="blog1.jpg" alt="">
+                    </div>
+
+                </div>
+
+                <div class=" text d-flex justify-content-center align-items-center flex-column"
+                    style="background-color: #000000;">
+                    <div class="col-lg-12 d-flex  py-4 textt position-relative"
+                        style="background-color: #000000; border-bottom: 1px solid #ffffff1f;">
+                        <div class="col-md-8">
+                            <span style="color: grey;font-weight: bold;font-size: 20px;">02 Apr 2023 Comments (03)
+                            </span>
+                            <h3 class="twel-text">Trending Code Setting For A Nice Portfolio</h3>
+                        </div>
+
+                        <div class="col-md-4 d-flex  justify-md-content-end align-items-center">
+                            <span class="twel "><i class="bi bi-arrow-up-short"></i> VIEW BLOG DETAILS</span>
+                        </div>
+
+                        <img class="img2 right position-absolute " src="blog1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row py-5" style="border-bottom: 1px solid #ffffff1f;">
+                <h1 class="text-white  py-5 fw-bold text-center" style="font-size: 9vw;">Let's Talk <i
+                        style="color: #c4ef17;" class="bi bi-arrow-up-right"></i></h1>
+            </div>
+
+        </div>
+
+        <!-- FOOTRR  SECTION -->
+
+        <div class="container-fluid bg-black" id="CONTACT">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-4 py-3 d-flex justify-content-center align-items-start flex-column">
+                        <h2><img src="logo.png" alt=""></h2>
+                        <p class="mb-5" style="color: grey;font-size: 19px;">Bjørn is an award UI/UX designs <br> and
+                            branding agency based in <br> New York, USA.</p>
+
+                        <div class="d-flex justify-content-start align-items-start">
+                            <a href="https://x.com/Sh09025566Rehan?s=09"><i class="bi bi-twitter footer-hov"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100050894417500&mibextid=ZbWKwL"><i
+                                    class="bi bi-facebook footer-hov ms-1"></i></a>
+                            <a href="https://www.instagram.com/rehhhhuuu_09_/profilecard/?igsh=MXdiamIwb3Z1NmJ4cA=="><i
+                                    class="bi bi-instagram footer-hov ms-2"></i></a>
+                            <a href=""><i class="bi bi-pinterest footer-hov ms-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2  py-3 d-flex justify-content-center align-items-start flex-column">
+                        <h5 class="text-white pt-5">Our Links</h5>
+                        <p class="footer-mini mt-3">Features</p>
+                        <p class="footer-mini">Team Member</p>
+                        <p class="footer-mini">Our Career</p>
+                        <p class="footer-mini">Login Here</p>
+                        <p class="footer-mini">Registred</p>
+                    </div>
+
+                    <div class="col-lg-2 py-3 d-flex justify-content-center align-items-start flex-column">
+                        <h5 class="text-white pt-5">Find it fast</h5>
+                        <p class="footer-mini mt-3">Home</p id="HOME">
+                        <p class="footer-mini">Service </p>
+                        <p class="footer-mini">ABout us</p>
+                        <p class="footer-mini">Contact Us </p>
+                        <p class="footer-mini">Features</p>
+                    </div>
+                    <div class="col-lg-4  d-flex justify-content-center align-items-start flex-column">
+
+                        <span class="mb-3" style="font-size: 26px;color: gray;">New South Head Rd, <br> Double Bay NSW
+                            2028,
+                            <br> New York</span>
+                        <h6 class="footer-top">contact <span style="border: none;">@</span>bjorn.com</h6>
+                        <h6 class="footer-top">+ 7016 067 232</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+            </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+</body>
+
+</html>

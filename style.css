@@ -1,0 +1,671 @@
+
+
+.slider {
+
+    animation: slider;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+} 
+
+@keyframes slider {
+
+    0%{
+        transform: translateX(0%);
+    }
+
+    33%{
+        transform: translateX(-100%);
+    }
+
+    66%{
+        transform: translateX(-200%);
+    }
+
+    100%{
+        transform: translateX(-3300%);
+    }
+
+}
+
+.forth-section
+{
+
+
+    background-image: url(video-bg.jpg);
+    height: 85vh;
+    width: 150%;
+    background-size: cover;
+    background-color: #262626;
+    overflow: hidden;
+
+}
+
+.btn-button-1{
+
+  padding: 10px 15px;
+  background-color: #ffffff0f;
+  color: white;
+  border: none;
+
+}
+
+.btn-button-1:hover{
+
+  background-color: #c4ef17;
+  transition: .3s linear;
+  color: black;
+
+}
+
+.btn-button{
+    padding: 20px 40px;
+    background-color: #ffffff0f;
+    color: white;
+    border: none;
+}
+
+.btn-button:hover{
+    background-color: #c4ef17;
+    transition: .3s linear;
+    color: black;
+}
+
+.hover:hover{
+
+    border-bottom: 1px solid white;
+    transition: .3s linear;
+
+}
+
+@media only screen and (max-width:932px) {
+    
+    .forth-section{
+
+        height: auto;
+        width: 150%;
+
+    }
+
+}
+
+.slider-1 {
+
+    animation: slider;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+} 
+
+@keyframes slider-1 {
+
+    0%{
+        transform: translateX(0%);
+    }
+
+    33%{
+        transform: translateX(-90%);
+    }
+
+    66%{
+        transform: translateX(-180%);
+    }
+
+    100%{
+        transform: translateX(-330%);
+    }
+
+}
+
+.img-1{
+    background-image: url(portfolio1.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.img-2{
+    background-image: url(portfolio2.jpg);
+    height:49%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-3{
+    background-image: url(portfolio4.jpg);
+    height: 49%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-4{
+    background-image: url(portfolio3.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+
+.jjhover:hover .jjbox{
+    background-color: #c4ef17;
+    border-radius: 50%;
+    
+}
+
+.jjhover:hover .hover-1{
+
+    background-color: #c4ef17 !important;
+    transition: .3s linear;
+    color: #262626 !important;
+
+}
+
+.jjhover:hover .hover-2{
+
+    background-color:rgb(61, 56, 56);
+    transition: .3s linear;
+    top: 0;
+    opacity: 1 !important;
+    z-index: 11111;
+
+}
+
+.eat-sec:hover .hover-2 {
+  background-color: rgb(61, 56, 56);
+  transition: .3s linear;
+  top: 0;
+  opacity: 1 !important;
+  z-index: 11111;
+}
+
+.eat-box:hover .hov-1 {
+  background-color: #c4ef17 !important;
+  transition: .1s linear;
+  color: #262626;
+
+}
+
+.hg:hover .hj {
+  background-color: #c4ef17 !important;
+  transition: .1s linear;
+  color: #262626;
+
+}
+@media only screen and (max-width:600px) {
+
+  .hover-2 {
+    
+    font-size: 7px;
+  }
+
+}
+
+@media only screen and (max-width:600px) {
+
+  .eat-mini {
+    padding-left: 12px;
+  }
+}
+
+@media only screen and (max-width:600px) {
+
+  .hj {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width:600px) {
+
+  .hg {
+    font-size: 1px;
+  }
+}
+
+/*  elvan section */
+
+
+.hover-parent {
+  transition: .3s linear;
+  overflow: hidden;
+}
+
+.hover-parent:hover  {
+  filter: grayscale(100%);
+}
+
+.hover-parent:hover h1 {
+ display: none;
+ transition: .3s linear;
+}
+
+.hover-parent:hover .hover-div {
+  transform: translateY(0) rotate(0deg);
+  transition: .4s linear;
+}
+
+.hover-div{
+  height: 0px;
+  transform: translateY(450px) rotate(50deg);
+}
+
+.icons:hover {
+  color: #c4ef17 !important;
+  transition: .3s linear;
+}
+
+.slider {
+  animation: slider;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* .elvan-box {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    width: 160px;
+  }
+  
+  .elvan-card:hover .elvan-box {
+    height: 140px;
+    opacity: 1;
+    transition: .3s linear;
+  }
+   */
+  
+  
+  
+  
+  .nine-text {
+    opacity: 0;
+    transition: .3s linear;
+  }
+  
+  .nine-card:hover .nine-text {
+    transition: .3s linear;
+    opacity: 1;
+  }
+  
+  /* TEN - SECTION */
+  
+  .feed-card{
+    /* animation-name: feedslider; */
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes feedslider{
+    0%{
+        transform: translateX(0);
+    }
+    29%{
+        transform: translateX(0);
+    }
+    34%{
+        transform: translateX(-100%);
+    }
+    65%{
+        transform: translateX(-100%);
+    }
+    70%{
+        transform: translateX(-200%);
+    }
+    95%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+  }
+  
+  .lines-f{
+    width: 60px !important;
+    height: 1px !important;
+    border: 1px solid white;
+  }
+  .lines-f1{
+    animation-name: linesanime ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .lines-f2{
+    animation-name: linesanime ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 3.4s;
+  }
+  .lines-f3{
+    animation-name: linesanime ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 7s;
+  }
+  
+  @keyframes linesanime{
+    0%{
+        border-color: white;
+    }
+    8%{
+        border-color: #1c2d37;
+    }
+    32%{
+        border-color: #1c2d37;
+    }
+    35%{
+        border-color: #ffffff;
+    }
+    100%{
+        border-color: #ffffff;
+    }
+  
+  }
+  /* RELGADI */
+  
+  slider {
+      animation: slider;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+  }
+  @keyframes slider {
+  
+      0% {
+          transform: translateX(0%);
+      }
+  
+      33% {
+          transform: translateX(-100%);
+      }
+  
+  
+      66% {
+          transform: translateX(-200%);
+      }
+  
+      100% {
+          transform: translateX(-300%);
+      }
+  
+  }
+  
+  
+  
+  
+  /* ELEVAN - SECTION */
+  .img {
+    animation-name: imageslider;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes imageslider {
+    0% {
+      transform: translateX(0);
+    }
+  
+    11% {
+      transform: translateX(-100%);
+    }
+  
+    22% {
+      transform: translateX(-200%);
+    }
+  
+    33% {
+      transform: translateX(-300%);
+    }
+  
+    44% {
+      transform: translateX(-400%);
+    }
+  
+    55% {
+      transform: translateX(-500%);
+    }
+  
+    66% {
+      transform: translateX(-600%);
+    }
+  
+    77% {
+      transform: translateX(-700%);
+    }
+  
+    88% {
+      transform: translateX(-800%);
+    }
+  
+    100% {
+      transform: translateX(-900%);
+    }
+  }
+  
+  .textt:hover h1 {
+    color: white !important;
+  }
+  
+  .textt:hover p {
+    color: white !important;
+  }
+  
+  .img1 {
+    height: 200px;
+    top: -20px;
+    left: 13%;
+    border-radius: 20px;
+    transform: rotate(-8deg);
+    transition: .3s linear;
+    opacity: 0;
+  }
+  
+  .textt:hover .img1 {
+    transform: rotate(0deg);
+    opacity: 1;
+    transition: .3s linear;
+    left: 15%;
+    z-index: 11;
+  
+  }
+  
+  
+  /*  */
+  .img2 {
+    height: 200px;
+    border-radius: 20px;
+    right: 10%;
+    top: -20px;
+    transform: rotate(8deg);
+    transition: .3s linear;
+    opacity: 0;
+  
+  }
+  
+  
+  .textt:hover .img2 {
+    transform: rotate(0deg);
+    opacity: 1;
+    transition: .3s linear;
+    right: 35%;
+    z-index: 111;
+  }
+  
+  .img5 {
+    animation-name: img1slider1;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: slider;
+    transform: translateX(-50%);
+  }
+  
+  
+  @keyframes img1slider1 {
+    0% {
+      transform: translateX(-50%);
+    }
+  
+    15% {
+      transform: translateX(-50%);
+    }
+  
+    20% {
+      transform: translateX(-150%);
+    }
+  
+    35% {
+      transform: translateX(-150%);
+    }
+  
+    40% {
+      transform: translateX(-250%);
+    }
+  
+    55% {
+      transform: translateX(-250%);
+    }
+  
+    60% {
+      transform: translateX(-350%);
+    }
+  
+    75% {
+      transform: translateX(-350%);
+    }
+  
+    80% {
+      transform: translateX(-450%);
+    }
+  
+    95% {
+      transform: translateX(-450%);
+    }
+  
+    100% {
+      transform: translateX(-550%);
+    }
+  
+  }
+  
+  .texthover:hover.text-h1 {
+    background-color: #ffff;
+  }
+  
+  .textslide {
+    animation-name: textslider;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: slider;
+    transform: translateX(0%);
+    z-index: 11;
+  }
+  
+  @keyframes textslider {
+    0% {
+      transform: translateX(0%);
+    }
+  
+    20% {
+      transform: translateX(-100%);
+    }
+  
+    40% {
+      transform: translateX(-500%);
+    }
+  
+    60% {
+      transform: translateX(-300%);
+    }
+  
+    80% {
+      transform: translateX(-400%);
+    }
+  
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  
+  
+  /* TWEL - SECTION */
+  .twel-text {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .twel-text:hover {
+    border-bottom: 2px solid white;
+    width: 68%;
+  }
+  
+  .twel {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .twel:hover {
+    color: #c4ef17;
+  }
+
+  .buton-hov{
+
+    background-color: #c4ef17;
+    padding: 20px 40px;
+    border: none;
+
+  }
+
+  .buton-hov:hover{
+
+    background-color: #262626;
+    transition: .3s linear;
+    color: white;
+
+  }
+  
+  /* FOOTERR - SECTION */
+  .footer-hov {
+    font-size: 18px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.225);
+    border-radius: 100%;
+    padding: 7px 11px;
+  }
+  
+  .footer-hov:hover {
+    background-color: #c4ef17;
+    color: black;
+    border: none;
+  }
+  
+  .footer-mini {
+    color: rgb(158, 154, 154);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .footer-mini:hover {
+    color: #c4ef17;
+    font-family: cursive;
+  }
+  
+  .footer-top {
+    font-size: 22px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.738);
+  }
+  
+  .footer-top:hover {
+    color: #c4ef17;
+  }
